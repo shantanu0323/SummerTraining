@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SquareApp extends AppCompatActivity {
 
@@ -22,6 +23,7 @@ public class SquareApp extends AppCompatActivity {
 
         init();
 
+
         bSquare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +31,7 @@ public class SquareApp extends AppCompatActivity {
                 if (!TextUtils.isEmpty(strValue)) {
                     int value = Integer.parseInt(strValue);
                     int answer = value * value;
-                    tvAnswer.setTextColor(Color.GREEN);
+                    tvAnswer.setTextColor(Color.rgb(0,170,0));
                     tvAnswer.setText("" + answer);
                 } else {
                     tvAnswer.setTextColor(Color.RED);
