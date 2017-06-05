@@ -44,7 +44,7 @@ public class AdvanceCalc extends AppCompatActivity {
                         tvResult.setText("" + (first * second));
                         break;
                     case R.id.rbDivide:
-                        tvResult.setText("" + (float)(first / second));
+                        tvResult.setText("" + ((float)first / second));
                         break;
 
                 }
