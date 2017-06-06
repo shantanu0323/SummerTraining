@@ -1,5 +1,6 @@
 package shantanu.summertraining;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,7 @@ public class AdvanceCalc extends AppCompatActivity {
     private boolean divRBchecked = false;
     private Spinner spinner;
     private Button bCalculate;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class AdvanceCalc extends AppCompatActivity {
         cbFloatingDiv = (CheckBox) findViewById(R.id.cbFloatingDiv);
         spinner = (Spinner) findViewById(R.id.spinner);
         bCalculate = (Button) findViewById(R.id.bCalculate);
+        intent = new Intent(getApplicationContext(), ResultActivity.class);
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -46,32 +49,43 @@ public class AdvanceCalc extends AppCompatActivity {
                         !TextUtils.isEmpty(etSecond.getText().toString().trim())) {
                     int first = Integer.parseInt(etFirst.getText().toString().trim());
                     int second = Integer.parseInt(etSecond.getText().toString().trim());
+                    String action = "";
                     switch (checkedId) {
                         case R.id.rbAdd:
                             tvResult.setText("" + (first + second));
                             divRBchecked = false;
+                            action = "Addition";
                             break;
                         case R.id.rbSubtract:
                             tvResult.setText("" + (first - second));
                             divRBchecked = false;
+                            action = "Subtraction";
                             break;
                         case R.id.rbMultiply:
                             tvResult.setText("" + (first * second));
                             divRBchecked = false;
+                            action = "Product";
                             break;
                         case R.id.rbDivide:
                             divRBchecked = true;
                             if (floatingIsChecked) {
                                 double result = (double) first / second;
                                 tvResult.setText("" + result);
+                                action = "Division";
                             } else {
                                 int result = first / second;
                                 tvResult.setText("" + result);
+                                action = "Floating Division";
                             }
                             break;
 
                     }
                     tvResult.setTextColor(Color.rgb(0, 170, 0));
+//                    intent.putExtra("result", tvResult.getText().toString());
+//                    intent.putExtra("first", String.valueOf(first));
+//                    intent.putExtra("second", String.valueOf(second));
+//                    intent.putExtra("action", action);
+//                    startActivity(intent);
                 } else {
                     tvResult.setText("Field cannot be left blank");
                     tvResult.setTextColor(Color.RED);
@@ -100,6 +114,11 @@ public class AdvanceCalc extends AppCompatActivity {
                         tvResult.setText("" + result);
                     }
                     tvResult.setTextColor(Color.rgb(0, 170, 0));
+//                    intent.putExtra("result", tvResult.getText().toString());
+//                    intent.putExtra("first", String.valueOf(first));
+//                    intent.putExtra("second", String.valueOf(second));
+//                    intent.putExtra("action", "Floating Division");
+//                    startActivity(intent);
                 } else {
                     tvResult.setText("Field cannot be left blank");
                     tvResult.setTextColor(Color.RED);
@@ -137,6 +156,11 @@ public class AdvanceCalc extends AppCompatActivity {
                         }
                     }
                     tvResult.setTextColor(Color.rgb(0, 170, 0));
+                    intent.putExtra("result", tvResult.getText().toString());
+                    intent.putExtra("first", String.valueOf(first));
+                    intent.putExtra("second", String.valueOf(second));
+                    intent.putExtra("action", action);
+                    startActivity(intent);
                 } else {
                     tvResult.setText("Field cannot be left blank");
                     tvResult.setTextColor(Color.RED);
