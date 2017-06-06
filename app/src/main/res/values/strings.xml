@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SummerTraining</string>
+    <string-array name="actions">
+        <item>Addition</item>
+        <item>Subtraction</item>
+        <item>Product</item>
+        <item>Division</item>
+        <item>Floating Division</item>
+    </string-array>
 </resources>

@@ -20,7 +20,7 @@
             android:label="SquareApp">
         </activity>
         <activity android:name=".HomeActivity"
-            android:label="HomeActivity">
+            android:label="Summer Training">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
