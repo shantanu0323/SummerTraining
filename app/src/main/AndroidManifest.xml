@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="shantanu.summertraining">
 
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,11 +35,15 @@
             android:name=".AdvanceCalc"
             android:label="AdvanceCalc">
         </activity>
-        <activity android:name=".ResultActivity"
+        <activity
+            android:name=".ResultActivity"
             android:label="ResultActivity">
         </activity>
-        <activity android:name=".SimpleInterest"
+        <activity
+            android:name=".SimpleInterest"
             android:label="SimpleInterest">
+        </activity>
+        <activity android:name=".ImplicitIntent">
         </activity>
     </application>
 
