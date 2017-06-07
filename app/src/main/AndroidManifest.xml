@@ -33,7 +33,11 @@
             android:name=".AdvanceCalc"
             android:label="AdvanceCalc">
         </activity>
-        <activity android:name=".ResultActivity">
+        <activity android:name=".ResultActivity"
+            android:label="ResultActivity">
+        </activity>
+        <activity android:name=".SimpleInterest"
+            android:label="SimpleInterest">
         </activity>
     </application>
 

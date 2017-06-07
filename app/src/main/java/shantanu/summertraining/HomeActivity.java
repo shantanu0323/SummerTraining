@@ -27,6 +27,7 @@ public class HomeActivity extends AppCompatActivity {
         listItems.add("MainActivity");
         listItems.add("SquareApp");
         listItems.add("AdvanceCalc");
+        listItems.add("SimpleInterest");
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
         listView.setAdapter(adapter);
