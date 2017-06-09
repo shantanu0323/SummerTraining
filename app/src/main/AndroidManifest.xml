@@ -51,6 +51,8 @@
         </activity>
         <activity android:name=".ActivityContainingFragment">
         </activity>
+        <activity android:name=".DynamicActivity">
+        </activity>
     </application>
 
 </manifest>

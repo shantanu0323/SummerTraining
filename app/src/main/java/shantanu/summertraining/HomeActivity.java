@@ -30,6 +30,7 @@ public class HomeActivity extends AppCompatActivity {
         listItems.add("ImplicitIntent");
         listItems.add("EmailSend");
         listItems.add("ActivityContainingFragment");
+        listItems.add("DynamicActivity");
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
         listView.setAdapter(adapter);
