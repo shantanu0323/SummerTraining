@@ -45,8 +45,11 @@
         </activity>
         <activity android:name=".ImplicitIntent">
         </activity>
-        <activity android:name=".EmailSend"
+        <activity
+            android:name=".EmailSend"
             android:label="Email">
+        </activity>
+        <activity android:name=".ActivityContainingFragment">
         </activity>
     </application>
 

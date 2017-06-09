@@ -24,7 +24,7 @@ public class SimpleInterest extends AppCompatActivity {
         etPrinciple = (EditText) findViewById(R.id.etPrinciple);
         etRate = (EditText) findViewById(R.id.etRate);
         etTime = (EditText) findViewById(R.id.etTime);
-        bCalc = (Button) findViewById(R.id.bCalc);
+        bCalc = (Button) findViewById(R.id.bOK);
 
         bCalc.setOnClickListener(new View.OnClickListener() {
             @Override
