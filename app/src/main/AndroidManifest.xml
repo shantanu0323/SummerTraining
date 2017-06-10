@@ -53,6 +53,13 @@
         </activity>
         <activity android:name=".DynamicActivity">
         </activity>
+        <activity android:name=".Activity1MainFragment">
+        </activity>
+        <activity
+            android:name=".ListViewImplementation"
+            android:label="@string/title_activity_list_view_implementation"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
