@@ -3,6 +3,8 @@
           package="shantanu.summertraining">
 
     <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -79,6 +81,9 @@
                 <action android:name="com.vit.shantanu"/>
             </intent-filter>
         </receiver>
+
+        <activity android:name=".SMSReceive">
+        </activity>
     </application>
 
 </manifest>

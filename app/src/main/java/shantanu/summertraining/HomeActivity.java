@@ -38,6 +38,7 @@ public class HomeActivity extends AppCompatActivity {
         listItems.add("SearchActivity");
         listItems.add("BroadcastRecieve");
         listItems.add("MyReciever");
+        listItems.add("SMSReceive");
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
         listView.setAdapter(adapter);
