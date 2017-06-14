@@ -33,6 +33,8 @@ public class HomeActivity extends AppCompatActivity {
         listItems.add("DynamicActivity");
         listItems.add("Activity1MainFragment");
         listItems.add("ListViewImplementation");
+        listItems.add("CustomListView");
+        listItems.add("DatabaseActivity");
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
         listView.setAdapter(adapter);

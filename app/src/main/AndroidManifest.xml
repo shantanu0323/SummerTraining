@@ -60,6 +60,10 @@
             android:label="@string/title_activity_list_view_implementation"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".CustomListView">
+        </activity>
+        <activity android:name=".DatabaseActivity">
+        </activity>
     </application>
 
 </manifest>
