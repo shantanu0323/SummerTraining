@@ -66,6 +66,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return courses;
     }
 
+    public Course getCourse(String title) {
+        Course course = null;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT id, title, price, hrs FROM " + TABLE_NAME + " WHERE " +
+                "title=?;", new String[]{title});
+        if (cursor.moveToFirst()) {
+            course = new Course(cursor.getInt(0), cursor.getString(1), cursor.getInt(2),
+                    cursor.getInt(3));
+        }
+        return course;
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 

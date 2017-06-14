@@ -11,6 +11,31 @@ import android.widget.Toast;
 
 public class SimpleInterest extends AppCompatActivity {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private EditText etPrinciple;
     private EditText etRate;
     private EditText etTime;

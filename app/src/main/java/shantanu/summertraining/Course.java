@@ -23,6 +23,9 @@ public class Course {
         this.price = price;
     }
 
+    public Course() {
+    }
+
     public int getCid() {
         return cid;
     }

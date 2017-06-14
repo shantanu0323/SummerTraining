@@ -35,6 +35,9 @@ public class HomeActivity extends AppCompatActivity {
         listItems.add("ListViewImplementation");
         listItems.add("CustomListView");
         listItems.add("DatabaseActivity");
+        listItems.add("SearchActivity");
+        listItems.add("BroadcastRecieve");
+        listItems.add("MyReciever");
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
         listView.setAdapter(adapter);

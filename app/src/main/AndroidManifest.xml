@@ -64,6 +64,21 @@
         </activity>
         <activity android:name=".DatabaseActivity">
         </activity>
+        <activity
+            android:name=".SearchActivity"
+            android:label="Search">
+        </activity>
+        <activity android:name=".BroadcastRecieve">
+        </activity>
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.vit.shantanu"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
