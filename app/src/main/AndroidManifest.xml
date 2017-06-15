@@ -84,6 +84,22 @@
 
         <activity android:name=".SMSReceive">
         </activity>
+        <activity android:name=".Threading">
+        </activity>
+
+        <service
+            android:name=".MyIntentService"
+            android:exported="false">
+        </service>
+
+        <activity android:name=".ServiceStartingActivity">
+        </activity>
+
+        <service
+            android:name=".MyStartedService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
     </application>
 
 </manifest>
